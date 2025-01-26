@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
 }
 const newTask = document.createElement('li');
-  newTask.textContent = 'taskText';
-  const removebutton = document.createElement('button');
-  removebutton.textContent = 'remove';
-  removebutton.className = 'remove-btn';
+  newTask.textContent = taskText;
+  const removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
+  removeButton.classList.add('remove-btn');
   taskList.appendChild(newTask);
-newTask.appendChild(removebutton);
-removebutton.onclick = function() {
+newTask.appendChild(removeButton);
+removeButton.onclick = function() {
     taskList.removeChild(newTask);
 };
       taskInput.value = ''; 
