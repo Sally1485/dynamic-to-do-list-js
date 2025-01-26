@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const taskText = taskInput.value.trim();
         if (taskText === '') {
     alert ('Enter a task');
+    return;
 }
 const newTask = document.createElement('li');
   newTask.textContent = 'taskText';
@@ -15,7 +16,7 @@ const newTask = document.createElement('li');
   taskList.appendChild(newTask);
 newTask.appendChild(removebutton);
 removebutton.onclick = function() {
-    taskList.removeChild(newtask);
+    taskList.removeChild(newTask);
 };
       taskInput.value = ''; 
 }
